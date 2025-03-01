@@ -6,11 +6,21 @@ import { Player } from "./components/player";
   await app.init({ background: "#1099bb", resizeTo: window });
   document.body.appendChild(app.canvas);
 
-  const player = new Player({ app, velocityX: 0, velocityY: 0 });
+  const player = new Player({ app, velocityX: 0, velocityY: 30 });
   player.position.set(100, 100);
   app.stage.addChild(player);
 
   app.ticker.add(() => {
     player.update();
+  });
+
+  document.addEventListener("keydown", ({ key }) => {
+    switch (key) {
+      case "w":
+        player.velocityY -= 20;
+      case "d":
+        player.velocityY -= 20;
+
+    }
   });
 })();

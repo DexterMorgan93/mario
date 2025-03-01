@@ -10,7 +10,7 @@ class Player extends Graphics {
   app: Application;
   velocityX;
   velocityY;
-  gravity: number = 0.5;
+  gravity: number = 2;
 
   constructor(options: PlayerI) {
     super();
@@ -29,6 +29,7 @@ class Player extends Graphics {
   update() {
     this.draw();
     this.position.y += this.velocityY;
+    this.position.x += this.velocityX;
 
     // остановка плейера, если достигает низа
     if (
