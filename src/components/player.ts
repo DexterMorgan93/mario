@@ -20,7 +20,7 @@ class Player extends Graphics {
   }
 
   draw() {
-    this.rect(0, 0, 100, 100).fill({
+    this.rect(0, 0, 20, 20).fill({
       color: "white",
       alpha: 1,
     });
@@ -37,7 +37,9 @@ class Player extends Graphics {
       this.app.canvas.height
     ) {
       this.velocityY += this.gravity;
-    } else this.velocityY = 0;
+    } else {
+      this.velocityY = 0;
+    }
   }
 }
 
