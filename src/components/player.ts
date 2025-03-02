@@ -21,7 +21,7 @@ class Player extends Graphics {
 
   draw() {
     this.rect(0, 0, 100, 100).fill({
-      color: "red",
+      color: "white",
       alpha: 1,
     });
   }
